@@ -1,4 +1,5 @@
 import { badRequest, ok, serverError } from "../helpers"
+import logger from "../logger"
 import { HttpResponse } from "../protocols"
 import { ICalculateMedia } from "../usecases/calculateMediaUseCase"
 import { IValidation } from "../validation"
@@ -11,11 +12,11 @@ export class CalculateMediaController implements IController{
         try {
             const error = this.validation.validate(request)
             if (error) {
-            return badRequest(error)
+              return badRequest(error)
             }
             const { number_1, number_2 } = request
             const media = await this.calculateMedia.execute(number_1, number_2)
-            return ok(media)
+            return ok(media, request)
         } catch(error){
             return serverError(error as Error)
         }
