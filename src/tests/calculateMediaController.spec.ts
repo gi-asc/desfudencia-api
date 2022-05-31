@@ -1,8 +1,8 @@
-import { CalculateMediaController } from "../controllers"
-import { InvalidParamError, MissingParamError } from "../errors"
-import { serverError } from "../helpers"
+import { serverError } from "../presentation/helpers"
+import { IValidation } from "../presentation"
+import { CalculateMediaController } from "../presentation/controllers/media"
+import { InvalidParamError } from "../presentation/errors"
 import { ICalculateMedia } from "../usecases/calculateMediaUseCase"
-import { IValidation } from "../validation"
 
 const calculateMedia = (): ICalculateMedia => {
         return {execute: async ()=> ""}

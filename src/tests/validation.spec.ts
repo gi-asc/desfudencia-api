@@ -1,5 +1,5 @@
-import { InvalidParamError, MissingParamError } from "../errors"
-import { makeCalculateMediaValidation } from "../factories"
+import { InvalidParamError, MissingParamError } from "../presentation/errors"
+import { makeCalculateMediaValidation } from "../main/factories"
 
 const validation = makeCalculateMediaValidation()
 describe('RequiredFieldsValidation', () => {

@@ -1,9 +1,6 @@
-import { badRequest, ok, serverError } from "../helpers"
-import logger from "../logger"
-import { HttpResponse } from "../protocols"
-import { ICalculateMedia } from "../usecases/calculateMediaUseCase"
-import { IValidation } from "../validation"
-import { IController } from "./IController"
+import { badRequest, ok, serverError } from "../../helpers"
+import { HttpResponse, IController, IValidation } from "../.."
+import { ICalculateMedia } from "../../../usecases/calculateMediaUseCase"
 
 export class CalculateMediaController implements IController{
     constructor(private calculateMedia: ICalculateMedia, private validation: IValidation){}

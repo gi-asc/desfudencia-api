@@ -1,6 +1,6 @@
-import { ServerError } from "../errors/serverError"
-import logger from "../logger"
-import { HttpResponse } from "../protocols/http"
+import logger from "../../logger"
+import { ServerError } from "../errors"
+import { HttpResponse } from "../protocols"
 
 export const badRequest = (error: Error): HttpResponse => {
   logger.error({error: error.message, success: false})
