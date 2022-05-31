@@ -1,5 +1,4 @@
-import { INumberValidator } from "../protocols"
-
+import { INumberValidator } from "../protocols/INumberValidator"
 
 export class NumberValidator implements INumberValidator {
     isValid(number: any): boolean {

@@ -1,7 +1,7 @@
 import express from 'express'
-import { makeCalculateMediaController } from './main/factories'
-import { adapterRoute } from './main'
+import { adapterRoute } from './main/adapters/adpterRoute'
 import { makeFindAddressController } from './main/factories/controllers/cep/makeFindAddressController'
+import { makeCalculateMediaController } from './main/factories/controllers/media/makeCalculateMediaController'
 export const routes = express.Router()
 
 routes.post('/media', adapterRoute(makeCalculateMediaController()))

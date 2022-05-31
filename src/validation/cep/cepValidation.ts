@@ -1,4 +1,5 @@
-import { InvalidParamError, IValidation } from "../../presentation"
+import { InvalidParamError } from "../../presentation/errors/invalidParamError"
+import { IValidation } from "../../presentation/protocols/IValidation"
 import { ICepValidator } from "../protocols/ICepValidator"
 
 export class CepValidation implements IValidation {

@@ -1,7 +1,5 @@
 import { IValidation } from "../../../presentation"
-import { RequiredFieldValidation, ValidationComposite } from "../../../validation"
-import { CepValidation } from "../../../validation/cep/cepValidation"
-import { CepValidator } from "../../../validation/cep/cepValidator"
+import { CepValidation, CepValidator, RequiredFieldValidation, ValidationComposite } from "../../../validation"
 
 export const makeCepValidation = (): ValidationComposite => {
   const validations: IValidation[] = []

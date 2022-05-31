@@ -1,6 +1,6 @@
-import { IFindAddress } from "../../../usecases/findAddressUseCase/IFindAddress";
-import { badRequest, ok, serverError } from "../../helpers";
-import { HttpResponse, IController, IValidation } from "../../protocols";
+import { IFindAddress } from "../../../usecases"
+import { badRequest, ok, serverError } from "../../helpers"
+import { HttpResponse, IController, IValidation } from "../../protocols"
 
 export class FindAddressController implements IController {
     constructor(private findAddress: IFindAddress, private validation: IValidation){}

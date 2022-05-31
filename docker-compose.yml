@@ -1,10 +1,11 @@
-version: "3"
-
-services: 
-  app: 
-    build: . 
-    command: npm run dev 
-    ports:
-      - "3000:3000" 
-    volumes:
-      - .:/usr/app 
+api:
+    image: node:alpine
+    container_name: api
+    restart: always
+    env_file: 
+      - .env
+    ports: 
+      - 3330:3330
+    volumes: 
+      - .:/usr/src/app
+    working_dir: /usr/src/app

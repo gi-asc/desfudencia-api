@@ -1,6 +1,6 @@
-import { IValidation } from "../../presentation"
-import { InvalidParamError } from "../../presentation"
-import { INumberValidator } from "../protocols"
+import { InvalidParamError } from "../../presentation/errors/invalidParamError"
+import { IValidation } from "../../presentation/protocols/IValidation"
+import { INumberValidator } from "../protocols/INumberValidator"
 
 export class NumberValidation implements IValidation {
   constructor (

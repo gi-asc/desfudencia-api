@@ -1,7 +1,8 @@
-import { AxiosInstance } from "axios";
-import { ICepRepository } from "./ICepRepository";
-import api from "../../../config/cep";
-import { IAddressModel } from "../../../data/dtos";
+import { AxiosInstance } from "axios"
+import api from "../../../config/cep"
+import { IAddressModel } from "../../../data"
+import { ICepRepository } from "./ICepRepository"
+
 
 export class CepRepository implements ICepRepository {
     private _request: AxiosInstance

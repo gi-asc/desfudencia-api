@@ -1,7 +1,7 @@
-import { CepRepository } from "../../../../infra/repositories/cep/cepRepository"
-import { FindAddressController } from "../../../../presentation/controllers/cep/findAddressController"
-import { FindAddress } from "../../../../usecases/findAddressUseCase/findAddress"
-import { makeCepValidation } from "../../validations/makeCepValidation"
+import { CepRepository } from "../../../../infra"
+import { FindAddressController } from "../../../../presentation"
+import { FindAddress } from "../../../../usecases"
+import { makeCepValidation } from "../../validations"
 
 export const makeFindAddressController = (): FindAddressController => {
     const validation = makeCepValidation()

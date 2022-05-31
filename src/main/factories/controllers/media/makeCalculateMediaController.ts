@@ -1,5 +1,5 @@
-import { CalculateMediaController } from "../../../../presentation/controllers/media"
-import { CalculateMedia } from "../../../../usecases/calculateMediaUseCase"
+import { CalculateMediaController } from "../../../../presentation"
+import { CalculateMedia } from "../../../../usecases"
 import { makeCalculateMediaValidation } from "../../validations"
 
 export const makeCalculateMediaController = (): CalculateMediaController => {
