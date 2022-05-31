@@ -1,0 +1,55 @@
+{
+    "openapi": "3.0.0",
+    "info": {
+        "title": "media API",
+        "description": "this API takes the average between two numbers",
+        "contact": {
+            "email": "giovanaaraujo3003@gmail.com"
+        },
+        "version": "1.0.0"
+    },
+    "servers": [
+        {
+            "url": "http://localhost:3330",
+            "description": "test API"
+        }
+    ],
+    "paths": {
+        "/media": {
+            "post": {
+                "summary": "Media",
+                "description": "return media two numbers",
+                "tags": ["Media"],
+         "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "number_1": {
+                    "type": "number"
+                  },
+                  "number_2": {
+                    "type": "number"
+                  }
+                },
+                "example": {
+                  "number_1": 12,
+                  "number_2": 14
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success"
+          },
+          "400": {
+            "description": "error"
+          }
+        }
+            }
+        }
+    }
+}

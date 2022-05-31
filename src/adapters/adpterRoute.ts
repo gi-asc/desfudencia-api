@@ -1,7 +1,7 @@
 import { Request, Response } from 'express'
 import { IController } from '../controllers'
 
-export const adapterRoute = (controller: IController): Response => {
+export const adapterRoute = (controller: IController) => {
   return async (req: Request, res: Response) => {
     const request = {
       ...(req.body || {}),
@@ -9,9 +9,9 @@ export const adapterRoute = (controller: IController): Response => {
     }
     const httpResponse = await controller.handle(request)
     if (httpResponse.statusCode >= 200 && httpResponse.statusCode <= 299) {
-      return res.status(httpResponse.statusCode).json(httpResponse.body)
+      res.status(httpResponse.statusCode).json(httpResponse.body)
     } else {
-      return res.status(httpResponse.statusCode).json({
+      res.status(httpResponse.statusCode).json({
         error: httpResponse.body.message
       })
     }
