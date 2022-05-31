@@ -1,5 +1,6 @@
 import { IValidation } from "../../../presentation"
-import { NumberValidation, NumberValidator, RequiredFieldValidation, ValidationComposite } from "../../../validation"
+import { NumberValidation, RequiredFieldValidation, ValidationComposite } from "../../../validation"
+import { NumberValidator } from "../../../validation/media"
 
 export const makeCalculateMediaValidation = (): ValidationComposite => {
   const validations: IValidation[] = []
