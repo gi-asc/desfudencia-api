@@ -50,6 +50,38 @@
           }
         }
             }
+        },
+        "/cep": {
+            "post": {
+                "summary": "Cep",
+                "description": "return address by Cep",
+                "tags": ["Cep"],
+         "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "cep": {
+                    "type": "string"
+                  }
+                },
+                "example": {
+                  "cep": "35930040"
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success"
+          },
+          "400": {
+            "description": "error"
+          }
+        }
+            }
         }
     }
 }

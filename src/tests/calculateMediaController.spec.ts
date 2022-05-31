@@ -1,8 +1,5 @@
-import { serverError } from "../presentation/helpers"
-import { IValidation } from "../presentation"
-import { CalculateMediaController } from "../presentation/controllers/media"
-import { InvalidParamError } from "../presentation/errors"
-import { ICalculateMedia } from "../usecases/calculateMediaUseCase"
+import { CalculateMediaController, InvalidParamError, IValidation, serverError } from "../presentation"
+import { ICalculateMedia } from "../usecases"
 
 const calculateMedia = (): ICalculateMedia => {
         return {execute: async ()=> ""}

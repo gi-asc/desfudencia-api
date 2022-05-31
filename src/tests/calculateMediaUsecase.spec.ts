@@ -1,4 +1,4 @@
-import { CalculateMedia } from "../usecases/calculateMediaUseCase"
+import { CalculateMedia } from "../usecases"
 
 const calculateMediaUseCase = new CalculateMedia()
 
