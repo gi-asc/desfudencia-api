@@ -1,7 +1,8 @@
-api:
+version: '3'
+services:
+  api:
     image: node:alpine
     container_name: api
-    restart: always
     env_file: 
       - .env
     ports: 
@@ -9,3 +10,4 @@ api:
     volumes: 
       - .:/usr/src/app
     working_dir: /usr/src/app
+    command: npm run start
