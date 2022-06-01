@@ -6,25 +6,23 @@ import {
 } from '../presentation';
 import { ICalculateMedia } from '../usecases';
 
-const calculateMedia = (): ICalculateMedia => {
-  return { execute: async () => '' };
+const calculateMedia: ICalculateMedia = {
+  execute: async () => '',
 };
-const validation = (): IValidation => {
-  return { validate: () => null };
+const validation: IValidation = {
+  validate: () => null,
 };
-const validationWithError = (): IValidation => {
-  return {
-    validate: () => {
-      return new InvalidParamError('any');
-    },
-  };
+const validationWithError: IValidation = {
+  validate: () => {
+    return new InvalidParamError('any');
+  },
 };
 
 const sutWithError = new CalculateMediaController(
-  calculateMedia(),
-  validationWithError()
+  calculateMedia,
+  validationWithError
 );
-const sut = new CalculateMediaController(calculateMedia(), validation());
+const sut = new CalculateMediaController(calculateMedia, validation);
 
 describe('CalculateMediaController', () => {
   it('should call calculateMedia.execute method if valid parameters are passed', async () => {
@@ -44,9 +42,11 @@ describe('CalculateMediaController', () => {
     expect(response.statusCode).toEqual(400);
   });
   it('should return 500 if a server error occurs', async () => {
-    const spy = jest.spyOn(sut, 'handle').mockImplementationOnce(async () => {
-      return serverError(new Error());
-    });
+    const spy = jest
+      .spyOn(calculateMedia, 'execute')
+      .mockImplementationOnce(async () => {
+        throw new Error();
+      });
     const request = {
       number_1: 12,
       number_2: 13,

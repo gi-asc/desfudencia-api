@@ -2,27 +2,24 @@ import {
   FindAddressController,
   InvalidParamError,
   IValidation,
-  serverError,
 } from '../presentation';
 import { IFindAddress } from '../usecases';
 
-const findAddress = (): IFindAddress => {
-  return {
-    execute: async () => {
-      return {
-        cep: '35930-040',
-        logradouro: 'Rua Venezuela',
-        complemento: '',
-        bairro: 'Nossa Senhora da Conceição',
-        localidade: 'João Monlevade',
-        uf: 'MG',
-        ibge: '3136207',
-        gia: '',
-        ddd: '31',
-        siafi: '4723',
-      };
-    },
-  };
+const findAddress: IFindAddress = {
+  execute: async () => {
+    return {
+      cep: '35930-040',
+      logradouro: 'Rua Venezuela',
+      complemento: '',
+      bairro: 'Nossa Senhora da Conceição',
+      localidade: 'João Monlevade',
+      uf: 'MG',
+      ibge: '3136207',
+      gia: '',
+      ddd: '31',
+      siafi: '4723',
+    };
+  },
 };
 const validation = (): IValidation => {
   return { validate: () => null };
@@ -36,10 +33,10 @@ const validationWithError = (): IValidation => {
 };
 
 const sutWithError = new FindAddressController(
-  findAddress(),
+  findAddress,
   validationWithError()
 );
-const sut = new FindAddressController(findAddress(), validation());
+const sut = new FindAddressController(findAddress, validation());
 
 describe('FindAddressController', () => {
   it('should call findAddress.execute method if valid parameters are passed', async () => {
@@ -57,8 +54,8 @@ describe('FindAddressController', () => {
     expect(response.statusCode).toEqual(400);
   });
   it('should return 500 if a server error occurs', async () => {
-    const spy = jest.spyOn(sut, 'handle').mockImplementationOnce(async () => {
-      return serverError(new Error());
+    jest.spyOn(findAddress, 'execute').mockImplementationOnce(async () => {
+      throw new Error();
     });
     const request = {
       cep: '35930030',
