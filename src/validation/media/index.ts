@@ -1,2 +1,2 @@
-export * from './numberValidation'
-export * from './numberValidator'
+export * from './numberValidation';
+export * from './numberValidator';

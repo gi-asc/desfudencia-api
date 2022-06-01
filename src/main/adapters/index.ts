@@ -1,1 +1,1 @@
-export * from './adpterRoute'
+export * from './adpterRoute';

@@ -1,1 +1,1 @@
-export * from './makeCalculateMediaController'
+export * from './makeCalculateMediaController';

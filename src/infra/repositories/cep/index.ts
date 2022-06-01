@@ -1,2 +1,2 @@
-export * from './ICepRepository'
-export * from './cepRepository'
+export * from './ICepRepository';
+export * from './cepRepository';

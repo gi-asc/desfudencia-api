@@ -1,2 +1,2 @@
-export * from './makeCalculateMediaValidator'
-export * from './makeCepValidation'
+export * from './makeCalculateMediaValidator';
+export * from './makeCepValidation';

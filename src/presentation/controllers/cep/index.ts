@@ -1,1 +1,1 @@
-export * from './findAddressController'
+export * from './findAddressController';

@@ -1,15 +1,15 @@
-import { IValidation } from "../presentation/protocols/IValidation"
+import { IValidation } from '../presentation/protocols/IValidation';
 
 export class ValidationComposite implements IValidation {
-  constructor (private readonly validations: IValidation[]) {}
+  constructor(private readonly validations: IValidation[]) {}
 
-  validate (input: any): Error | null {
+  validate(input: any): Error | null {
     for (const validation of this.validations) {
-      const error = validation.validate(input)
+      const error = validation.validate(input);
       if (error) {
-        return error
+        return error;
       }
     }
-      return null
+    return null;
   }
 }

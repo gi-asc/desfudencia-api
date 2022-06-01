@@ -1,2 +1,2 @@
-export * from './ICepValidator'
-export * from './INumberValidator'
+export * from './ICepValidator';
+export * from './INumberValidator';

@@ -1,3 +1,3 @@
 export interface ICepValidator {
-  isValid: (cep: any) => boolean
+  isValid: (cep: any) => boolean;
 }

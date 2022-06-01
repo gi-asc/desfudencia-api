@@ -1,2 +1,2 @@
-export * from './ICalculateMedia'
-export * from './calculateMedia'
+export * from './ICalculateMedia';
+export * from './calculateMedia';

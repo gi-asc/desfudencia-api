@@ -1,2 +1,2 @@
-export * from './cepValidation'
-export * from './cepValidator'
+export * from './cepValidation';
+export * from './cepValidator';

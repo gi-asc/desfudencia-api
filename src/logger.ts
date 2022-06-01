@@ -1,8 +1,8 @@
-import pino from "pino";
+import pino from 'pino';
 export default pino({
-    enabled: true,
-    level: 'info',
-    transport: {
-    target: 'pino-pretty'
-    },
-})
+  enabled: true,
+  level: 'info',
+  transport: {
+    target: 'pino-pretty',
+  },
+});

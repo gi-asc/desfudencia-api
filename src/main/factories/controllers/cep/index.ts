@@ -1,1 +1,1 @@
-export * from './makeFindAddressController'
+export * from './makeFindAddressController';

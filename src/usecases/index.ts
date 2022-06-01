@@ -1,2 +1,2 @@
-export * from './calculateMediaUseCase'
-export * from './findAddressUseCase'
+export * from './calculateMediaUseCase';
+export * from './findAddressUseCase';

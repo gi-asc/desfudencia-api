@@ -1,5 +1,5 @@
-import { IAddressModel } from "../../../data";
+import { IAddressModel } from '../../../data';
 
 export interface ICepRepository {
-    findAddress(cep: string): Promise<IAddressModel>
+  findAddress(cep: string): Promise<IAddressModel>;
 }

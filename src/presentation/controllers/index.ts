@@ -1,2 +1,2 @@
-export * from './cep'
-export * from './media'
+export * from './cep';
+export * from './media';
