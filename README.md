@@ -58,7 +58,15 @@ Para rodar testes, rode o seguinte comando:
 ```bash
   npm run test
 ```
+## Cobertura de testes
 
+
+--------------------------------------|---------|----------|---------|---------|
+File                                  | % Stmts | % Branch | % Funcs | % Lines | Uncovered Line #s 
+--------------------------------------|---------|----------|---------|---------|-------------------
+All files                             |   95.52 |    84.93 |   96.87 |   95.52 |  
+
+        
 
 ## Demo
 
