@@ -70,8 +70,8 @@ All files                             |   95.52 |    84.93 |   96.87 |   95.52 |
 
 ## Demo
 
-Para ter uma demonstração das rotas, com a aplicação rodando, acesse
-    http://localhost:3330/doc
+Para ter uma demonstração das rotas, acesse
+   https://desfudencia.herokuapp.com/doc/
 
 
 
