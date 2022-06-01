@@ -12,4 +12,4 @@ app.use(cors());
 app.use(express.json());
 app.use('/doc', SwaggerUi.serve, SwaggerUi.setup(swaggerDocs));
 app.use(routes);
-app.listen(3330, () => console.log('Server is running!'));
+app.listen(process.env.PORT || 3330, () => console.log('Server is running!'));
