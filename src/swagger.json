@@ -10,7 +10,7 @@
     },
     "servers": [
         {
-            "url": "http://localhost:3330",
+            "url": "https://desfudencia.herokuapp.com",
             "description": "test API"
         }
     ],
