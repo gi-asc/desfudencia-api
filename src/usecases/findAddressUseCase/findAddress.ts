@@ -1,4 +1,4 @@
-import { IAddressModel } from '../../data/dtos/IAddresModel';
+import { IAddressModel } from '../../data/dtos/IAddressModel';
 import { ICepRepository } from '../../infra/repositories/cep/ICepRepository';
 import { IFindAddress } from './IFindAddress';
 

@@ -1,1 +1,1 @@
-export * from './IAddresModel';
+export * from './IAddressModel';
